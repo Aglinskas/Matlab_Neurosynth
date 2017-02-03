@@ -19,7 +19,7 @@ k = 3; % smoothing kernel for meta analysis;
 % choose words to include and exclude until satisfied, proceed
 % EDIT: CHOOSE WORDS TO INCLUDE EXCLUDE
 words = {'face' 'facial' 'person' 'people'}%{'face' 'facial' 'person' 'people'};
-to_drop = {'al' 'surface' 'rs' 'interpersonal'} %{'al' 'surface' 'rs' 'interpersonal'};
+to_drop = {'al' 'surface' ''} %{'al' 'surface' 'rs' 'interpersonal'};
 
 % % % % %
 clear t tt list inds
