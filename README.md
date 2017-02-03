@@ -3,10 +3,6 @@ Runs meta-analysis on neurosynth database in Matlab
 
 .. work still in progress. 
 
-##How to run: 
-*click for video*
-[![Running the script](https://cloud.githubusercontent.com/assets/15108226/22597159/c0a849a6-ea2e-11e6-932b-a5fac84f3351.jpg)](https://www.youtube.com/watch?v=3z9eThlg45w "Quick walkthrough")
-
 
 What it does: 
 ###- Part 1 of the code generates a list of words;
@@ -29,6 +25,11 @@ for example if exact coordinate [42 -46 -22] get reported three times, it has va
 - exact file gets exported as meta.nii
 -  smoothed file gets exported as smeta.nii
 
-<img width="840" alt="napkin 03-02-17 5 02 17 pm" src="https://cloud.githubusercontent.com/assets/15108226/22598094/8c8166f4-ea32-11e6-920d-02e3d8e96d3d.png">
+<img width="1098" alt="napkin 03-02-17 5 05 06 pm" src="https://cloud.githubusercontent.com/assets/15108226/22598204/f1b6aaca-ea32-11e6-80e4-dfa86ac20487.png">
 
+
+
+##How to run: 
+*click for video*
+[![Running the script](https://cloud.githubusercontent.com/assets/15108226/22597159/c0a849a6-ea2e-11e6-932b-a5fac84f3351.jpg)](https://www.youtube.com/watch?v=3z9eThlg45w "Quick walkthrough")
 
