@@ -16,10 +16,19 @@ iterate by changing to words to be included and exluded(1) and pressing CMD+ENTE
 
 ### - Part 2 of the code does the following; 
 - Searches the neurosynth _features_ database for studies that 'load' (as defined by neurosynth) on those words
+
+![image](https://cloud.githubusercontent.com/assets/15108226/22597895/c8c8493a-ea31-11e6-85cd-320e8dd96847.png)
+
+
+![screen shot 2017-02-03 at 16 44 03](https://cloud.githubusercontent.com/assets/15108226/22597961/0be27e66-ea32-11e6-9818-957678933d5f.jpg)
+
+
 - takes the voxels reported by those studies and plots them onto an empty brain by adding +1 every time that coordinate gets reported; 
 for example if exact coordinate [42 -46 -22] get reported three times, it has value of 3; [42 -46 -23] get reported 1 time, it gets value of 2; 
 - smooths result with kernel chosen.
 - exact file gets exported as meta.nii
 -  smoothed file gets exported as smeta.nii
+
+<img width="840" alt="napkin 03-02-17 5 02 17 pm" src="https://cloud.githubusercontent.com/assets/15108226/22598094/8c8166f4-ea32-11e6-920d-02e3d8e96d3d.png">
 
 
