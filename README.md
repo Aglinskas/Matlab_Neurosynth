@@ -20,7 +20,7 @@ iterate by changing to words to be included and exluded(1) and pressing CMD+ENTE
 
 
 - takes the voxels reported by those studies and plots them onto an empty brain by adding +1 every time that coordinate gets reported; 
-for example if exact coordinate [42 -46 -22] get reported three times, it has value of 3; [42 -46 -23] get reported 1 time, it gets value of 2; 
+for example if exact coordinate [42 -46 -22] get reported three times, it has value of 3; [42 -46 -23] get reported 1 time, it gets value of 1; 
 - smooths result with kernel chosen.
 - exact file gets exported as meta.nii
 -  smoothed file gets exported as smeta.nii
