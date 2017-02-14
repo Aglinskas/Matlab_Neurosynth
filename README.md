@@ -33,3 +33,14 @@ for example if exact coordinate [42 -46 -22] get reported three times, it has va
 *click for video*
 [![Running the script](https://cloud.githubusercontent.com/assets/15108226/22597159/c0a849a6-ea2e-11e6-932b-a5fac84f3351.jpg)](https://www.youtube.com/watch?v=3z9eThlg45w "Quick walkthrough")
 
+
+# author_similarity.m
+_author_similarity.m_
+
+- Generates a mean feature vector for each the authors
+- Runs a correlation matrix and a dendrogram
+
+Like this: 
+![screen shot 2017-02-14 at 17 35 37](https://cloud.githubusercontent.com/assets/15108226/22938485/2ec7205a-f2dc-11e6-945e-db929bfa8688.jpg)
+
+
