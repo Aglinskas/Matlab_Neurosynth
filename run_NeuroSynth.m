@@ -18,7 +18,7 @@ k = 3; % smoothing kernel for meta analysis;
 %% Part 1; Choose word list (RUN UNTIL SATISFIED)
 % choose words to include and exclude until satisfied, proceed
 % EDIT: CHOOSE WORDS TO INCLUDE EXCLUDE
-words = {'face' 'facial' 'person' 'people'}%{'face' 'facial' 'person' 'people'};
+words = {'face' 'facial' 'person' 'people'} %{'face' 'facial' 'person' 'people'};
 to_drop = {'al' 'surface' 'rs' 'interpersonal'} %{'al' 'surface' 'rs' 'interpersonal'};
 
 % % % % %
@@ -96,16 +96,16 @@ catch
 end
 %
 disp('Mapping Coordinates')
-shitty_cords = [];
+shitty_cords = []; % coords that are either out of the template or negative in voxel space
 for i = 1:length(meta.db_inds)
 c_mm = [meta.x(i) meta.y(i) meta.z(i)];
 c_vx = inv(m)*[c_mm 1]';
 c_vx = round(c_vx(1:3));
-if sum(c_vx > 0) ~= 3
+if sum(c_vx > 0) ~= 3 % are the coords that are negative in voxel space?
     c_vx(c_vx<0) = 1;
     shitty_cords(end+1) = i;
 end
-if sum(c_vx > [90 109 90]') > 0
+if sum(c_vx > [90 109 90]') > 0 % are they out of range/ 
     c_vx(find(c_vx > [90 109 90]')) = size(im.img,find(c_vx > [90 109 90]'));
     shitty_cords(end+1) = i;
 end
@@ -115,7 +115,7 @@ save_nii(im,ofn)
 p_k = [k k k];
 spm_smooth(ofn,ofsn,p_k)
 disp('done')
-%%
+%% notes and shit
 %unique(im.img(im.img>0))
 %tabulate(im.img(im.img>0))
 
@@ -133,5 +133,5 @@ disp('done')
 
 % x = poissrnd(4,20,1);
 % pd = fitdist(x,'poisson');
-% pd.NLogL
+% pd.NLogL oth
 
