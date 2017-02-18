@@ -1,6 +1,7 @@
 %CMD+ENTER to run portion of the script 
 %% Part 0: Load up datasets and specify parameters (RUN ONCE)
 clear all
+clc
 % EDIT: POINT SCRIPT TO THE FOLDER
 p.root_folder = '/Users/aidasaglinskas/Desktop/Matlab_Neurosynth';
 
@@ -10,6 +11,7 @@ load(fullfile(p.root_folder,'Neurosynth_all.mat'))
 load(fullfile(p.root_folder,'NeuroSynth_labels.mat'))
 %load('/Users/aidasaglinskas/Desktop/Neurosynth/face_inds.mat')
 disp('loaded')
+
 % Parameters
 p.name_of_MRI_template = 'single_subj_T1.nii';
 p.meta_analysis_output_fn = 'meta.nii';
@@ -115,23 +117,3 @@ save_nii(im,ofn)
 p_k = [k k k];
 spm_smooth(ofn,ofsn,p_k)
 disp('done')
-%% notes and shit
-%unique(im.img(im.img>0))
-%tabulate(im.img(im.img>0))
-
-% Play ground
-%b = zeros(size(im.img));
-%spm_smooth(ofn,b,p)
-
-
-% Poisson distrib assumptions, random and independent
-%lambda = mean(X)
-%variance == mean
-%P(X=x) = (lambda^x - 2.718^-lambda) / factorial(x)
-
-
-
-% x = poissrnd(4,20,1);
-% pd = fitdist(x,'poisson');
-% pd.NLogL oth
-
