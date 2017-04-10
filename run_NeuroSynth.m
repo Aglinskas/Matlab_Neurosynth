@@ -113,6 +113,8 @@ if sum(c_vx > [90 109 90]') > 0 % are they out of range/
 end
 im.img(c_vx(1),c_vx(2),c_vx(3)) = im.img(c_vx(1),c_vx(2),c_vx(3)) + 1;
 end
+disp(sprintf('%d coordinate entries were outside the brain temp',length(shitty_cords)))
+disp(round([meta.x(shitty_cords) meta.y(shitty_cords) meta.z(shitty_cords)]))
 save_nii(im,ofn)
 p_k = [k k k];
 spm_smooth(ofn,ofsn,p_k)
